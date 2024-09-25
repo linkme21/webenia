@@ -1,0 +1,519 @@
+/* From Uiverse.io by mobinkakei */ 
+button {
+    position: relative;
+    margin: 0;
+    padding: 17px 35px;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: 1px solid rgba(22, 76, 167, 0.6);
+    border-radius: 10px;
+    color: #1d89ff;
+    font-weight: 400;
+    font-family: inherit;
+    z-index: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+  }
+  
+  button span {
+    color: #164ca7;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+  }
+  
+  button:hover {
+    animation: rotate624 0.7s ease-in-out both;
+  }
+  
+  button:hover span {
+    animation: storm1261 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+  }
+  
+  @keyframes rotate624 {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  
+    25% {
+      transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+  
+    50% {
+      transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+  
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+  
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes storm1261 {
+    0% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+  
+    25% {
+      transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+  
+    50% {
+      transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+  
+    75% {
+      transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+  
+    100% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+  }
+  
+
+
+  .lazy-load {
+    opacity: 0;
+    position: relative;
+    
+    animation-direction: reverse;
+    transition: opacity 1s ease-in-out;
+  }
+  @keyframes myfirst {
+      /* 0%   { top: 110px;} */
+      /* 10%   { top: 100px;}
+      30%   { top: 90px;}
+      
+      80%   { top: 30px;} */
+
+      /* 100% { top: 0px;} */
+  }
+  .loaded {
+    opacity: 1;
+    animation: myfirst 1s ;
+  }
+
+  .axil-main-slid {
+    height: 600px;
+    background: linear-gradient(300deg,  #0C8D7E , #03342F , #09786B , #06665B , #03342F , #033E37 , #065349 );
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+    
+  }
+  .axil-main-slid .image-slider{
+    /* margin-top:50px; */
+    /* margin-left:10px; */
+  }
+  @media only screen and (max-width: 768px) {
+  .axil-main-slid { 
+    height: 800px;
+    background: linear-gradient(300deg,  #7b5c53, #26c3b3 , red);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+    
+  }
+  .axil-main-slid .image-slider{
+    margin-top:50px;
+    margin-left:10px;
+  }
+}
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+
+
+@keyframes right-move {
+    50% {
+        right: 0;
+        width: 12px;
+        height: 12px;
+        border-radius: 20px ;
+    }
+
+    100% {
+        right: 0;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px ;
+    }
+}
+
+@keyframes left-move {
+    50% {
+        left: 0;
+        width: 12px;
+        height: 12px;
+        border-radius: 20px ;
+    }
+
+    100% {
+        left: 0;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px ;
+    }
+}
+
+
+
+.image-slider {
+    position: relative;
+}
+
+.fade-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+    height: auto;
+}
+
+.fade-image.active {
+    opacity: 1;
+    animation: gradient-animation 18s ease infinite;
+}
+
+
+
+.img-br{
+  border-radius:71% 29% 64% 36% / 29% 52% 48% 71%  ;
+  weight:304px;
+  height:304px;
+}
+
+.container .row .bak{
+  /* background-image:  url("assets/img/blob-haikei.png"); */
+  width:100%;
+}
+
+
+//////////////
+
+
+/* Styling the text container */
+.text-container {
+  position: relative;
+  height: auto; /* Adjust as needed */
+}
+
+/* Slide Up Animation */
+.slide-up {
+  position: relative;
+  opacity: 0;
+  transform: translatex(100px); /* Starting point: 100px below its original position */
+  transition: transform 1s ease-out, opacity 1s ease-out; /* Smooth transition */
+}
+
+.slide-up.active {
+  opacity: 1;
+  transform: translateY(0); /* Move to its original position */
+}
+
+
+.back-imd {
+  background-image: url('../img/Webeina CProf A5 ARABIC-04.jpg'); 
+  width:100%;
+  height:700px;
+  color:white;
+   background-size: cover;
+   /* position: relative; */
+  /* background-position:; */
+  background-repeat: no-repeat;
+}
+
+
+//////////////////////////////////////
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove Horizontal Scrolling */
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Styling section UAE container */
+.section-box {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  width: 100%; /* Ensure full width */
+  overflow-x: hidden; /* Prevent section from causing horizontal scroll */
+}
+
+/* Flexbox container */
+.infographic-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align content vertically */
+  padding: 50px;
+  flex-wrap: wrap; /* Allow wrapping for small screens */
+  width: 100%; /* Prevent overflow */
+}
+
+/* Map Background and World Map */
+.map-background {
+  position: relative;
+  width: 40%; /* Ensure it's relative to container */
+  text-align: left;
+}
+
+.map-background h1 {
+  color: #ffffff;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.world-map {
+  background: url('https://via.placeholder.com/500x300') no-repeat center;
+  background-size: contain;
+  height: 300px;
+  width: 100%;
+}
+
+/* Right Side: Content */
+.content {
+  width: 55%; /* Ensure it's within the viewport */
+}
+
+.content h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateX(100%); /* Slide animation */
+  transition: all 0.7s ease-in-out;
+}
+
+.circle {
+  background-color: #18abc5;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5em;
+  padding: 15px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+}
+
+.info-box p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+#info1 { animation-delay: 0.3s; }
+#info2 { animation-delay: 0.6s; }
+#info3 { animation-delay: 0.9s; }
+#info4 { animation-delay: 1.2s; }
+
+.active {
+  opacity: 1;
+  transform: translateX(0); /* Slide in from the right */
+}
+
+/* --- Responsive Design using Media Queries --- */
+
+/* Tablets and Small Screens (width <= 1024px) */
+@media only screen and (max-width: 1024px) {
+  .infographic-container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+    text-align: center; /* Center align for smaller screens */
+  }
+
+  .map-background {
+    width: 100%; /* Full width for smaller screens */
+    margin-bottom: 20px; /* Add spacing */
+  }
+
+  .content {
+    width: 100%; /* Full width for content */
+  }
+
+  .map-background h1 {
+    font-size: 2.5em; /* Adjust title size */
+  }
+
+  .content h2 {
+    font-size: 2.2em; /* Adjust title size */
+  }
+}
+
+/* Mobile Devices (width <= 768px) */
+@media only screen and (max-width: 768px) {
+  .infographic-container {
+    padding: 20px;
+  }
+
+  .map-background h1 {
+    font-size: 2em; /* Reduce font size */
+  }
+
+  .content h2 {
+    font-size: 1.8em;
+  }
+
+  .circle {
+    font-size: 1.2em; /* Adjust circle font */
+    padding: 10px; /* Adjust circle padding */
+    width: 50px;
+    height: 50px;
+  }
+
+  .info-box p {
+    font-size: 1em; /* Adjust text size */
+    line-height: 1.3em;
+  }
+}
+
+/* Extra Small Devices (width <= 480px) */
+@media only screen and (max-width: 480px) {
+  .map-background h1 {
+    font-size: 1.5em; /* Further reduce font size */
+  }
+
+  .content h2 {
+    font-size: 1.5em; /* Smaller content title */
+  }
+
+  .circle {
+    font-size: 1em;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .info-box p {
+    font-size: 0.9em;
+  }
+}
+
+.back-img2{
+  background-image: url('../img/panoramic-view-dubai-city-illuminated-neon-spectrum.jpg');
+  background-size: cover;
+ background-repeat: no-repeat;
+ color:white;
+}
+
+
+
+
+/* What We Offer Section */
+.what-we-offer-section {
+  padding: 50px 0;
+  background-color: #0d0d2b; /* Dark background similar to overall theme */
+  text-align: center;
+}
+
+.offer-title {
+  font-size: 2.5em;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.offer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.offer-item {
+  width: 22%;
+  background-color: #1b1b3a;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.offer-item:hover {
+  transform: translateY(-10px);
+}
+
+.offer-icon img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.offer-text h3 {
+  font-size: 1.5em;
+  color: #a460ff;
+  margin-bottom: 10px;
+}
+
+.offer-text p {
+  color: #d1d1e5;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+
+.singl-services-Back{
+  /* height:600px; */
+  Background-image:url('../img/Webeina CProf A5 ARABIC-07.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  
+}
+.singl-services-Back1{
+  /* height:600px; */
+  Background-image:url('../img/Webeina CProf A5 ARABIC-12.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  
+}
+
+.img-border{
+  border-radius:100% 0% 41% 59% / 51% 0% 100% 49%    ;
+  weight:304px;
+  height:304px;
+}
+@media (max-width: 480px) {
+
+  .img-border{
+    border-radius:68% 32% 100% 0% / 100% 30% 70% 0%     ;
+    weight:304px;
+    height:304px;
+  }
+
+
+}
